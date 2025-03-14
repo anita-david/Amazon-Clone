@@ -19,6 +19,8 @@ if (!cart) {
 
 export function addToCart(productId) {
   let matchingItem;
+	let quantityInput = Number(document.querySelector(`.js-quantity-input-${productId}`).value);
+	console.log(quantityInput);
 
 	cart.forEach((cartItem) => {
 		if(productId === cartItem.productId) {
@@ -26,7 +28,7 @@ export function addToCart(productId) {
 		}
 	});
 	if (matchingItem) {
-		matchingItem.quantity ++;
+		matchingItem.quantity = quantityInput;
 	} else {
 		cart.push({
 			productId,
