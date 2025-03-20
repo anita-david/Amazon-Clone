@@ -7,9 +7,8 @@ import {
 } from "../../data/cart.js";
 import { products, getProduct } from "../../data/products.js";
 import { formatCurrency } from "../Utils/money.js";
-import { hello } from "https://unpkg.com/supersimpledev@1.0.1/hello.esm.js";
-import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
-hello();
+// import { hello } from "https://unpkg.com/supersimpledev@1.0.1/hello.esm.js";
+
 import {
   deliveryOptions,
   getDeliveryOption,
@@ -19,7 +18,6 @@ import {
 	renderPaymentSummary
 } from './paymentSummary.js';
 import { renderCheckoutHeader } from "./checkoutHeader.js";
-
 
 
 export function renderOrderSummary() {
