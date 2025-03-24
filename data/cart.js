@@ -26,10 +26,9 @@ function saveToStorage() {
 
 export function addToCart(productId) {
   let matchingItem;
-  // let quantityInput = Number(document.querySelector(`.js-quantity-input-${productId}`).value);
-  let quantityInput = 1;
-  console.log(quantityInput);
-  console.log(typeof quantityInput);
+  let quantityElement = document.querySelector(`.js-quantity-input-${productId}`);
+let quantityInput = quantityElement ? Number(quantityElement.value) : 0;
+
 
   cart.forEach((cartItem) => {
     if (productId === cartItem.productId) {
@@ -41,7 +40,7 @@ export function addToCart(productId) {
   } else {
     cart.push({
       productId,
-      quantity: 1,
+      quantity: quantityInput,
       deliveryOptionId: "1",
     });
   }
