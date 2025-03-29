@@ -1,8 +1,13 @@
-import {renderCheckoutHeader} from './Checkout/checkoutHeader.js';
+import { renderCheckoutHeader } from "./Checkout/checkoutHeader.js";
 import { renderOrderSummary } from "./Checkout/orderSummary.js";
 import { renderPaymentSummary } from "./Checkout/paymentSummary.js";
-//import '../data/cart-class.js';
+import { loadProducts } from "../data/products.js";
 
-renderCheckoutHeader();
-renderOrderSummary();
-renderPaymentSummary();
+//import '../data/cart-class.js';
+// import '../data/backend-practice.js';
+
+loadProducts(() => {
+  renderCheckoutHeader();
+  renderOrderSummary();
+  renderPaymentSummary();
+});
